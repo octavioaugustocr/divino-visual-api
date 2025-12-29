@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace divino_visual_api.Models
 {
-    public class Category
+    public class CategoryModel
     {
         public int Id { get; set; }
         public string Name { get; set; }

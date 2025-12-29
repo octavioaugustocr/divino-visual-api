@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace divino_visual_api.Models
 {
-    public class ServiceProfessional
+    public class ServiceProfessionalModel
     {
         public int Id { get; set; }
         public int ProfessionalId { get; set; }

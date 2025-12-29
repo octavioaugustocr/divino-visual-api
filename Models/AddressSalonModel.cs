@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace divino_visual_api.Models
 {
-    public sealed class AddressSalon
+    public sealed class AddressSalonModel
     {
         public string? Cep { get; set; }
         public string? Street { get; set; }

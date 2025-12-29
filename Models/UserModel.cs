@@ -6,7 +6,7 @@ using divino_visual_api.Enums;
 
 namespace divino_visual_api.Models
 {
-    public class User
+    public class UserModel
     {
         public int Id { get; set; }
         public string FullName { get; set; }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace divino_visual_api.Models
 {
-    public class Salon
+    public class SalonModel
     {
         public int Id { get; set; }
         public string FantasyName { get; set; }
@@ -17,7 +17,7 @@ namespace divino_visual_api.Models
         public string? CoverImage { get; set; }
         public TimeOnly OpeningTime { get; set; }
         public TimeOnly ClosingTime { get; set; }
-        public AddressSalon Address { get; set; }
+        public AddressSalonModel Address { get; set; }
         public bool Active { get; set; }
         public int UserAdminId { get; set; }
         public DateTime CreatedAt { get; set; }

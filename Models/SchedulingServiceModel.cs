@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace divino_visual_api.Models
 {
-    public class SchedulingService
+    public class SchedulingServiceModel
     {
         public int Id { get; set; }
         public int SchedulingId { get; set; }

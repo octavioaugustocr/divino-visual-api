@@ -6,7 +6,7 @@ using divino_visual_api.Enums;
 
 namespace divino_visual_api.Models
 {
-    public class Scheduling
+    public class SchedulingModel
     {
         public int Id { get; set; }
         public int UserId { get; set; }

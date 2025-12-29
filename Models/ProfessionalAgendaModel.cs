@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace divino_visual_api.Models
 {
-    public class ProfessionalAgenda
+    public class ProfessionalAgendaModel
     {
         public int Id { get; set; }
         public DayOfWeek DayOfWeek { get; set; }

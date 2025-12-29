@@ -11,21 +11,21 @@ namespace divino_visual_api.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<User> Users { get; set; }
-        public DbSet<Salon> Salons { get; set; }
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Service> Services { get; set; }
-        public DbSet<Professional> Professionals { get; set; }
-        public DbSet<ServiceProfessional> ServicesProfessional { get; set; }
-        public DbSet<ProfessionalAgenda> ProfessionalAgenda { get; set; }
-        public DbSet<Scheduling> Scheduling { get; set; }
-        public DbSet<SchedulingService> SchedulingServices { get; set; }
+        public DbSet<UserModel> Users { get; set; }
+        public DbSet<SalonModel> Salons { get; set; }
+        public DbSet<CategoryModel> Categories { get; set; }
+        public DbSet<ServiceModel> Services { get; set; }
+        public DbSet<ProfessionalModel> Professionals { get; set; }
+        public DbSet<ServiceProfessionalModel> ServicesProfessional { get; set; }
+        public DbSet<ProfessionalAgendaModel> ProfessionalAgenda { get; set; }
+        public DbSet<SchedulingModel> Scheduling { get; set; }
+        public DbSet<SchedulingServiceModel> SchedulingServices { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Salon>().OwnsOne(s => s.Address);
+            modelBuilder.Entity<SalonModel>().OwnsOne(s => s.Address);
 
-            modelBuilder.Entity<Salon>(builder =>
+            modelBuilder.Entity<SalonModel>(builder =>
             {
                 builder.OwnsOne(s => s.Address, sa =>
                 {
@@ -39,9 +39,12 @@ namespace divino_visual_api.Data
                 });
             });
 
-            modelBuilder.Entity<Service>(entity => entity.Property(s => s.Price).HasColumnType("decimal(18,2)"));
-            modelBuilder.Entity<Scheduling>(entity => entity.Property(s => s.TotalValue).HasColumnType("decimal(18,2)"));
-            modelBuilder.Entity<SchedulingService>(entity => entity.Property(s => s.ServicePrice).HasColumnType("decimal(18,2)"));
+            modelBuilder.Entity<ServiceModel>(entity => entity.Property(s => s.Price)
+                .HasColumnType("decimal(18,2)"));
+            modelBuilder.Entity<SchedulingModel>(entity => entity.Property(s => s.TotalValue)
+                .HasColumnType("decimal(18,2)"));
+            modelBuilder.Entity<SchedulingServiceModel>(entity => entity.Property(s => s.ServicePrice)
+                .HasColumnType("decimal(18,2)"));
         }
     }
 }
