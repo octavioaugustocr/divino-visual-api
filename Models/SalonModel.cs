@@ -10,7 +10,7 @@ namespace divino_visual_api.Models
         public int Id { get; set; }
         public string FantasyName { get; set; }
         public string Cnpj { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public string? LogoImage { get; set; }

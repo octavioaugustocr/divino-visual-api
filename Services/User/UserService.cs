@@ -14,17 +14,17 @@ public class UserService : IUserService
         _userRepository = userRepository;
     }
     
-    public Task<ResponseModel<UserModel>> GetUserById(int id)
+    public async Task<ResponseModel<UserModel>> GetUserById(int id)
     {
-        return _userRepository.GetUserById(id);
+        return await _userRepository.GetUserById(id);
     }
 
-    public Task<ResponseModel<List<UserModel>>> GetAllUsers()
+    public async Task<ResponseModel<List<UserModel>>> GetAllUsers()
     {
-        return _userRepository.GetAllUsers();
+        return await _userRepository.GetAllUsers();
     }
 
-    public Task<ResponseModel<UserModel>> CreateUser(CreateUserDto createUserDto)
+    public async Task<ResponseModel<UserModel>> CreateUser(CreateUserDto createUserDto)
     {
         var userModel = new UserModel()
         {
@@ -40,10 +40,10 @@ public class UserService : IUserService
             CreatedAt = DateTime.Now
         };
         
-        return _userRepository.CreateUser(userModel);
+        return await _userRepository.CreateUser(userModel);
     }
 
-    public Task<ResponseModel<UserModel>> UpdateUser(int id, UpdateUserDto updateUserDto)
+    public async Task<ResponseModel<UserModel>> UpdateUser(int id, UpdateUserDto updateUserDto)
     {
         var userModel = new UserModel()
         {
@@ -57,11 +57,11 @@ public class UserService : IUserService
             ProfilePhoto = updateUserDto.ProfilePhoto,
         };
         
-        return _userRepository.UpdateUser(userModel);
+        return await _userRepository.UpdateUser(userModel);
     }
 
-    public Task<ResponseModel<string>> DeleteUser(int id)
+    public async Task<ResponseModel<string>> DeleteUser(int id)
     {
-        return _userRepository.DeleteUser(id);
+        return await _userRepository.DeleteUser(id);
     }
 }
