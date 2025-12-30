@@ -47,7 +47,9 @@ public class SalonService : ISalonService
             CoverImage = createSalonDto.CoverImage,
             OpeningTime = createSalonDto.OpeningTime,
             ClosingTime = createSalonDto.ClosingTime,
-            Address = addressModel
+            Address = addressModel,
+            Active = true,
+            CreatedAt = DateTime.Now
         };
         
         return await _salonRepository.CreateSalon(salonModel);

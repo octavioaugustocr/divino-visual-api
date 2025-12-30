@@ -1,6 +1,7 @@
 using divino_visual_api.Data;
 using divino_visual_api.Repositories.Salon;
 using divino_visual_api.Repository.User;
+using divino_visual_api.Services.Salon;
 using divino_visual_api.Services.User;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +20,7 @@ builder.Services.AddDbContext<AppDbContext>(options => options
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ISalonRepository, SalonRepository>();
+builder.Services.AddScoped<ISalonService, SalonService>();
 
 var app = builder.Build();
 

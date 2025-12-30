@@ -19,7 +19,7 @@ namespace divino_visual_api.Models
         public TimeOnly ClosingTime { get; set; }
         public AddressSalonModel Address { get; set; }
         public bool Active { get; set; }
-        public int UserAdminId { get; set; }
+        public int? UserAdminId { get; set; }
         public DateTime CreatedAt { get; set; }
     }
 }
