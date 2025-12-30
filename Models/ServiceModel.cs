@@ -13,7 +13,7 @@ namespace divino_visual_api.Models
         public decimal Price { get; set; }
         public int EstimatedDurationMinutes { get; set; }
         public bool Active { get; set; }
-        public int SalonId { get; set; }
-        public int CategoryId { get; set; }
+        public int? SalonId { get; set; }
+        public int? CategoryId { get; set; }
     }
 }
