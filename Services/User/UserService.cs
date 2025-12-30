@@ -34,7 +34,7 @@ public class UserService : IUserService
             Password = createUserDto.Password,
             PhoneNumber = createUserDto.PhoneNumber,
             DateBirth = createUserDto.DateBirth,
-            Genrer = createUserDto.Genrer,
+            Gender = createUserDto.Gender,
             ProfilePhoto = createUserDto.ProfilePhoto,
             TypeUser = TypeUserEnum.Customer,
             CreatedAt = DateTime.Now
@@ -53,7 +53,7 @@ public class UserService : IUserService
             Email = updateUserDto.Email,
             PhoneNumber = updateUserDto.PhoneNumber,
             DateBirth = updateUserDto.DateBirth,
-            Genrer = updateUserDto.Genrer,
+            Gender = updateUserDto.Gender,
             ProfilePhoto = updateUserDto.ProfilePhoto,
         };
         

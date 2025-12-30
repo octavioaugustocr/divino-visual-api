@@ -24,7 +24,7 @@ public class UpdateUserDto
     public DateOnly DateBirth { get; set; }
     
     [Required(ErrorMessage = "Please provide the genrer of the user")]
-    public GenrerEnum Genrer { get; set; }
+    public GenderEnum Gender { get; set; }
     
     public string? ProfilePhoto { get; set; }
 }

@@ -1,6 +1,6 @@
 namespace divino_visual_api.Enums
 {
-    public enum GenrerEnum
+    public enum GenderEnum
     {
         Male,
         Female,

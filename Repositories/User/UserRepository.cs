@@ -99,7 +99,7 @@ public class UserRepository : IUserRepository
             existingUser.Email = user.Email;
             existingUser.PhoneNumber = user.PhoneNumber;
             existingUser.DateBirth = user.DateBirth;
-            existingUser.Genrer = user.Genrer;
+            existingUser.Gender = user.Gender;
             existingUser.ProfilePhoto = user.ProfilePhoto;
             existingUser.TypeUser = user.TypeUser;
             
