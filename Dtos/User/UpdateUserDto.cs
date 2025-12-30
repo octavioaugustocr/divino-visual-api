@@ -23,7 +23,7 @@ public class UpdateUserDto
     [Required(ErrorMessage = "Please provide the date of birth of the user")]
     public DateOnly DateBirth { get; set; }
     
-    [Required(ErrorMessage = "Please provide the genrer of the user")]
+    [Required(ErrorMessage = "Please provide the gender of the user")]
     public GenderEnum Gender { get; set; }
     
     public string? ProfilePhoto { get; set; }

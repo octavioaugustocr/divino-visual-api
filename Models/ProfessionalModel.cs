@@ -16,6 +16,6 @@ namespace divino_visual_api.Models
         public GenderEnum Gender { get; set; }
         public string? ProfilePhoto { get; set; }
         public bool Active { get; set; }
-        public int? SalonId { get; set; }
+        public int SalonId { get; set; }
     }
 }
