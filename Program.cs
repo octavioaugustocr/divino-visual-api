@@ -1,4 +1,5 @@
 using divino_visual_api.Data;
+using divino_visual_api.Repositories.Category;
 using divino_visual_api.Repositories.Professional;
 using divino_visual_api.Repositories.Salon;
 using divino_visual_api.Repository.User;
@@ -25,6 +26,7 @@ builder.Services.AddScoped<ISalonRepository, SalonRepository>();
 builder.Services.AddScoped<ISalonService, SalonService>();
 builder.Services.AddScoped<IProfessionalRepository, ProfessionalRepository>();
 builder.Services.AddScoped<IProfessionalService, ProfessionalService>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 var app = builder.Build();
 
