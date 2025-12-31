@@ -27,7 +27,7 @@ public class CategoriesController : ControllerBase
         return Ok(await _categoryService.GetAllCategories());
     }
 
-    [HttpGet("{salonId}")]
+    [HttpGet("/salon/{salonId}")]
     public async Task<IActionResult> GetAllCategoriesBySalonId(int salonId)
     {
         return Ok(await _categoryService.GetAllCategoriesBySalonId(salonId));

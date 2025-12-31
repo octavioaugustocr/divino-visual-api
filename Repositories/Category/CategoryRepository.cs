@@ -19,7 +19,7 @@ public class CategoryRepository : ICategoryRepository
 
         try
         {
-            var category = await _appDbContext.Categories.FindAsync(id);
+            var category = await _appDbContext.Categories.FirstOrDefaultAsync(c => c.Id == id);
             if (category == null)
             {
                 response.Message = $"Category with Id {id} not found!";
@@ -66,7 +66,8 @@ public class CategoryRepository : ICategoryRepository
 
         try
         {
-            var categories = await _appDbContext.Categories
+            var categories = await _appDbContext
+                .Categories
                 .Where(c => c.SalonId == salonId).ToListAsync();
             
             response.Data = categories;
@@ -109,7 +110,7 @@ public class CategoryRepository : ICategoryRepository
 
         try
         {
-            var existingCategory = await _appDbContext.Categories.FindAsync(id);
+            var existingCategory = await _appDbContext.Categories.FirstOrDefaultAsync(c => c.Id == id);
             if (existingCategory == null)
             {
                 response.Message = $"Category with ID {id} not found!";
