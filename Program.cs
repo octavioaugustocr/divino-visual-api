@@ -3,6 +3,7 @@ using divino_visual_api.Repositories.Category;
 using divino_visual_api.Repositories.Professional;
 using divino_visual_api.Repositories.Salon;
 using divino_visual_api.Repository.User;
+using divino_visual_api.Services.Category;
 using divino_visual_api.Services.Professional;
 using divino_visual_api.Services.Salon;
 using divino_visual_api.Services.User;
@@ -27,6 +28,7 @@ builder.Services.AddScoped<ISalonService, SalonService>();
 builder.Services.AddScoped<IProfessionalRepository, ProfessionalRepository>();
 builder.Services.AddScoped<IProfessionalService, ProfessionalService>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 var app = builder.Build();
 
