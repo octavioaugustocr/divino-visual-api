@@ -101,6 +101,7 @@ public class ProfessionalRepository : IProfessionalRepository
             existingProfessional.PhoneNumber = professional.PhoneNumber;
             existingProfessional.Gender = professional.Gender;
             existingProfessional.ProfilePhoto = professional.ProfilePhoto;
+            existingProfessional.SalonId = professional.SalonId;
             
             _appDbContext.Professionals.Update(existingProfessional);
             await _appDbContext.SaveChangesAsync();

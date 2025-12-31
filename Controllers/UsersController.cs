@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace divino_visual_api.Controllers;
 
 [ApiController]
-[Route("/api/v1/users")]
+[Route("api/v1/users")]
 public class UsersController : ControllerBase
 {
     private readonly IUserService _userService;
